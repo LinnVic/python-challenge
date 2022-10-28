@@ -57,7 +57,11 @@ print(f'Greatest Decrease in Profits: {max_decrease["month"]} (${max_decrease["c
 exportpath = ("Results.txt")
 with open(exportpath, "w") as textfile:
         textfile.write(f"Total Months: {total_months}")
+        textfile.write("\n")
         textfile.write(f"Total: ${total_amount}")
+        textfile.write("\n")
         textfile.write(f"Average Change: ${average}")
+        textfile.write("\n")
         textfile.write(f"Greatest Increase in Revenues: ${max_increase}")
+        textfile.write("\n")
         textfile.write(f"Greasest Decrease in Revenues:  ${max_decrease}")
