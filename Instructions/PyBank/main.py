@@ -39,8 +39,8 @@ total_change = sum(row['change'] for row in budget_data)
 average = round(total_change / (total_months-1), 2)
 
 # Getting the  Greatest Increase and Decrease from the changes
-get_increase = max(budget_data, key=lambda x:x['change'])
-get_decrease = min(budget_data, key=lambda x:x['change'])
+max_increase = max(budget_data, key=lambda x:x['change'])
+max_decrease = min(budget_data, key=lambda x:x['change'])
 
 
 # Printting the Final Analysis
@@ -49,17 +49,15 @@ print('----------------------------')
 print(f'Total Months: {total_months}')
 print(f'Total: ${total_amount}')
 print(f'Average Change: ${average}')
-print(f'Greatest Increase in Profits: {get_increase["month"]} (${get_increase["change"]})')
-print(f'Greatest Decrease in Profits: {get_decrease["month"]} (${get_decrease["change"]})')
+print(f'Greatest Increase in Profits: {max_increase["month"]} (${max_increase["change"]})')
+print(f'Greatest Decrease in Profits: {max_decrease["month"]} (${max_decrease["change"]})')
 
 
-# Printting  the Final analysis and exporting to a text file 
-filepath = os.path.join('.', 'Resources', 'PyBank_Results.txt')
-with open(filepath, "w") as text_file:
-    print('Financial Analysis', file=text_file)
-    print('----------------------------', file=text_file)
-    print(f'Total Months: {total_months}', file=text_file)
-    print(f'Total: ${total_amount}', file=text_file)
-    print(f'Average Change: ${average}', file=text_file)
-    print(f'Greatest Increase in Profits: {get_increase["month"]} (${get_increase["change"]})', file=text_file)
-    print(f'Greatest Decrease in Profits: {get_decrease["month"]} (${get_decrease["change"]})', file=text_file)
+# Exporting to a text file 
+exportpath = ("Results.txt")
+with open(exportpath, "w") as textfile:
+        textfile.write(f"Total Months: {total_months}")
+        textfile.write(f"Total: ${total_amount}")
+        textfile.write(f"Average Change: ${average}")
+        textfile.write(f"Greatest Increase in Revenues: ${max_increase}")
+        textfile.write(f"Greasest Decrease in Revenues:  ${max_decrease}")

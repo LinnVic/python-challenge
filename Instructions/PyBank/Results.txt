@@ -1,1 +1,1 @@
-Total Months: 86Total: $22564198Average Change: $-8311.11Greatest Increase in Revenues: $1862002Greasest Decrease in Revenues:  $-1825558
+Total Months: 86Total: $22564198Average Change: $-836333.41Greatest Increase in Revenues: ${'month': 'Mar-13', 'amount': 1141840, 'change': 52857}Greasest Decrease in Revenues:  ${'month': 'Dec-10', 'amount': -1194133, 'change': -2283116}
